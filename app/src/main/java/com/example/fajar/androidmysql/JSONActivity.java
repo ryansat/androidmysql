@@ -34,6 +34,11 @@ public class JSONActivity extends Activity {
         Connection a = new Connection();
         URL as;
         xResult = getRequest(url);
+        try{
+            parse(txtResult);
+        }catch(Exception e){
+           Toast.makeText(getApplicationContext(),"Failed To Parse", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
